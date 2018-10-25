@@ -2,9 +2,7 @@
 <meta charset="utf-8">
 <head>
 <title>Force Editor</title>
-<!-- <script src="d3.v2.min.js"></script> -->
 <script src="http://d3js.org/d3.v2.min.js"></script>
-<!-- <script src="jquery-1.8.3.min.js"></script> -->
 <style>
 
 body {
@@ -16,6 +14,48 @@ body {
 
 .wrap-graph {
     display: flex;
+}
+
+.wrap-graph > div {
+    position: relative;
+    width: 50%;
+    border-right: 2px solid #ff7f0e;
+    border-bottom: 2px solid #ff7f0e;
+}
+
+.wrap-graph > div:nth-child(2) button {
+  padding: 8px 5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+a.button{
+ display:inline-block;
+ padding:0.7em 1.7em;
+ margin:0 0.3em 0.3em 0;
+ border-radius:0.2em;
+ box-sizing: border-box;
+ text-decoration:none;
+ font-family:'Roboto',sans-serif;
+ font-weight:400;
+ color:#FFFFFF;
+ background-color:#3369ff;
+ box-shadow:inset 0 -0.6em 1em -0.35em rgba(0,0,0,0.17),inset 0 0.6em 2em -0.3em rgba(255,255,255,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+ text-align:center;
+ position:relative;
+}
+
+a.button:active{
+ box-shadow:inset 0 0.6em 2em -0.3em rgba(0,0,0,0.15),inset 0 0 0em 0.05em rgba(255,255,255,0.12);
+}
+@media all and (max-width:30em){
+ a.button{
+  display:block;
+  margin:0.4em auto;
+ }
 }
 
 .node {
@@ -56,6 +96,7 @@ body {
     <div class="wrap-graph">
         <div id="chart"></div>
         <div id="options">
+          <a href="#" onclick="getNodos()" class="button">Calcular</a>
             <button type="button" onclick="getNodos()">Calcular nodos</button>
         </div>
   </div>
