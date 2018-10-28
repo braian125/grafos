@@ -53,10 +53,40 @@
             border-radius: 10px;
             display: flex;
             box-shadow: 0px 11px 33px rgba(0, 0, 0, 0.2), 0px 4px 0px rgba(0, 0, 0, 0.112);
+            flex-direction: column;
         }
         
         .wrap-graph>div:nth-child(2) .option-container {
             margin: auto;
+        }
+        
+        .wrap-graph>div:nth-child(2) .credits {
+            display: flex;
+            justify-content: space-between;
+            color: #ddd;
+            margin-top: 1em;
+        }
+        
+        .wrap-graph>div:nth-child(2) label {
+            color: rgba(255, 255, 255, 0.25);
+        }
+        
+        .wrap-graph>div:nth-child(2) .credits span a {
+            padding: 5px 10px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 13px;
+        }
+        
+        a {
+            color: #fff;
+        }
+        
+        span {
+            transition: all 0.2s ease-in-out;
+        }
+        
+        span:hover {
+            transform: scale(1.2);
         }
         
         .wrap-graph>div:nth-child(2) h2 {
@@ -168,7 +198,14 @@
         <body>
             <div class="wrap-graph">
                 <div id="chart"></div>
+
                 <div id="options">
+                    <label>Autores: </label>
+                    <div class="credits">
+                        <span><a href="https://github.com/braian125" target="_blank">@braian125</a></span>
+                        <span><a href="https://github.com/JonathanDe" target="_blank">@JonathanDe</a></span>
+                        <span><a href="https://github.com/leomare12" target="_blank">@leomar12</a></span>
+                    </div>
                     <div class="option-container">
                         <div class="info-container">
                             <h2>Programa para calcular grafo </h2>
