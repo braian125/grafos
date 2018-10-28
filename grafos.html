@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 
 <head>
-    <title>Force Editor</title>
+    <title>Calcular Matriz Grafo - Brian Vanegas, Leonardo Marín, Jonathan Dominguez</title>
     <script src="http://d3js.org/d3.v2.min.js"></script>
     <style>
         * {
@@ -40,6 +40,16 @@
             border-radius: 10px;
             padding: 1em;
             box-shadow: 0px 11px 33px rgba(0, 0, 0, 0.2), 0px 4px 0px rgba(0, 0, 0, 0.112);
+        }
+        
+        .wrap-graph>div:nth-child(1):after {
+            content: "Haz click en el circulo y arrastra para comenzar a crear al grafo";
+            position: absolute;
+            color: #fff;
+            top: 0;
+            left: 0;
+            padding-left: 1em;
+            font-style: italic;
         }
         
         .wrap-graph>div:nth-child(1) svg {
@@ -103,6 +113,16 @@
             margin-bottom: 2em;
             margin-top: 3em;
             border-radius: 10px;
+            position: relative;
+        }
+        
+        .wrap-graph>div:nth-child(2) .resultados:after {
+            content: "Matriz resultante:";
+            top: -25px;
+            left: 0;
+            position: absolute;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 14px;
         }
         
         #infoR {
